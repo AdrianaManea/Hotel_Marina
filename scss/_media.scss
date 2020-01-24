@@ -1,0 +1,129 @@
+
+// $bp-largest: 75em; - 1200 px / 16px = 75em
+@media only screen and (max-width: $bp-largest) {
+  .container {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+// $bp-large: 68.75em; - 1100 px / 16px = 68.75em
+@media only screen and (max-width: $bp-large) {
+  html {
+    font-size: 50%;  //1rem = 8px, 8px/16px=50%
+  }
+}
+
+// $bp-medium: 56.25em; - 900 px / 16px = 56.25em
+@media only screen and (max-width: $bp-medium) {
+  .content {
+    flex-direction: column;
+  }
+
+  .side-nav {
+    display: flex;
+    margin: 0;
+  }
+
+  .legal {
+    display: none;
+  }
+
+  .side-nav {
+    &__item {
+      flex: 1;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__link:link,
+    &__link:visited {
+      justify-content: center;
+      padding: 2rem;
+    }
+  }
+
+  .detail {
+    padding: 3rem;
+  }
+
+  .description {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  .review {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .cta {
+    padding: 2.5rem 0;
+  }
+}
+
+
+// $bp-medium: 37.5em; - 600 px / 16px = 37.5em
+@media only screen and (max-width: $bp-small) {
+  .detail {
+    flex-direction: column;
+  }
+
+  .description {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+
+  .side-nav {
+    &__link:link,
+    &__link:visited {
+      flex-direction: column;
+      padding: 1.5rem .5rem;
+    }
+
+    &__icon {
+      margin-right: 0;
+      margin-bottom: .7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .overview {
+    &__heading {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
+
+    &__rating {
+      padding: 0 1.5rem;
+    }
+
+    &__rating-average {
+      font-size: 1.8rem;
+    }
+
+    &__rating-count {
+      font-size: .5rem;
+    }
+  }
+}
+
+
+// $bp-smallest: 31.25em; - 500 px / 16px = 31.25em
+@media only screen and (max-width: $bp-smallest) {
+  .search {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
+
+  .header {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
+}
